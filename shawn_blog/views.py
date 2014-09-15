@@ -5,10 +5,14 @@ from tornado.web import RequestHandler
 
 class HomeHandler(RequestHandler):
     def get(self):
-        self.write("hello world")
+        self.render('home.html', title='Home', name='Shawn')
 
 
-def clear_marks(db, db_lock):
-    with db_lock:
-        db.marks.drop()
+class ArticleEditHandler(RequestHandler):
+    def get(self):
+        self.render('articles/article_edit.html', title='Writing a article')
 
+
+class ArticleDetailHandler(RequestHandler):
+    def get(self):
+        self.render('articles/article_detail.html', title='Article detail')

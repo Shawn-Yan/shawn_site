@@ -9,7 +9,7 @@ from _db import *
 from views import *
 
 sub_path = Path(__file__).parent.joinpath
-db_path = Path(__file__).parent
+db_path = Path(__file__).parent / 'db.SQLite3'
 
 MEDIA_DIR = Path(__file__).parent / 'media'
 IMAGE_DIR = MEDIA_DIR / 'image'
@@ -18,6 +18,8 @@ IMAGE_DIR = MEDIA_DIR / 'image'
 # design the handles with views
 HANDLERS = [
     (r'/', HomeHandler),
+    (r'/edit/$', ArticleEditHandler),
+    (r'/detail/$', ArticleDetailHandler),
 ]
 
 UI_MODULES = {
@@ -28,12 +30,12 @@ UI_MODULES = {
 class BlogApp(web.Application):
     def __init__(self, options):
         db_lock = RLock()
-        super.__init__(
+        super(BlogApp, self).__init__(
             handlers=HANDLERS,
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
             ui_modules=UI_MODULES,
-            db=MySQLite(db_path),
+            db=MySQLite(str(db_path)),
             db_lock=db_lock,
             image_dir=IMAGE_DIR,
             debug=True,

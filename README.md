@@ -7,3 +7,7 @@
 ---python 3.4.X
 ---Tornado 4.0.1
 ---sqlite3
+
+
+#run server
+python server.py -port=8080
