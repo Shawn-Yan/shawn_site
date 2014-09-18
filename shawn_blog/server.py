@@ -19,7 +19,8 @@ IMAGE_DIR = MEDIA_DIR / 'image'
 HANDLERS = [
     (r'/', HomeHandler),
     (r'/edit/$', ArticleEditHandler),
-    (r'/detail/$', ArticleDetailHandler),
+    (r'/article/([^/]+)', ArticleDetailHandler),
+    (r'/outline/$', ArticleOutlineHandler),
 ]
 
 UI_MODULES = {
@@ -29,18 +30,22 @@ UI_MODULES = {
 
 class BlogApp(web.Application):
     def __init__(self, options):
-        db_lock = RLock()
-        super(BlogApp, self).__init__(
-            handlers=HANDLERS,
+
+        settings = dict(
+            blog_title=u"Shawn Blog",
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
             ui_modules=UI_MODULES,
-            db=MySQLite(str(db_path)),
-            db_lock=db_lock,
             image_dir=IMAGE_DIR,
+            xsrf_cookies=True,
+            cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
+            login_url="/auth/login",
             debug=True,
-            # autoreload=False,
         )
+        web.Application.__init__(self, HANDLERS, **settings)
+
+        # Have one global connection to the blog DB across all handlers
+        self.db = MySQLite(str(db_path))
 
 
 def main():

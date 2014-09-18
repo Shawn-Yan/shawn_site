@@ -2,6 +2,7 @@ __author__ = 'shawn'
 
 from datetime import datetime
 
+
 class Author:
     FIELDS = (
         ('name', str, 'Shawn Yan'),
