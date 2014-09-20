@@ -29,8 +29,9 @@ class ArticleEditHandler(BaseHandler):
         id = self.get_argument("id", None)
         article = None
         if id:
-            article = self.db.select_id_flag('article', int(id))
-        self.render("edit.html", article=article[0])
+            articles = self.db.select_id_flag('article', int(id))
+            article = articles[0]
+        self.render("edit.html", article=article)
 
     def post(self):
         id = self.get_argument("id", None)
@@ -68,6 +69,14 @@ class ArticleDetailHandler(BaseHandler):
         self.render('detail.html', article=article[0])
 
 
+class ArticleDeleteHandler(BaseHandler):
+    def get(self):
+        id = self.get_argument("id", None)
+        self.db.delete('article', int(id))
+        self.render('delete.html')
+
+
 class ArticleOutlineHandler(BaseHandler):
     def get(self):
-        self.render('outline.html',title = 'Article Outline')
+        articles = self.db.select('article')
+        self.render('outline.html', articles=articles)

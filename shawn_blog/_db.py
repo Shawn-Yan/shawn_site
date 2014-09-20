@@ -82,9 +82,9 @@ class MySQLite:
             print 'SQLite3 update error'
             self.conn.rollback()
 
-    def delete(self, table, name):
+    def delete(self, table, flag):
         try:
-            self.cur.execute("DELETE FROM %s WHERE Name = '%s'" % (table, name))
+            self.cur.execute("DELETE FROM %s WHERE id = '%d'" % (table, flag))
             self.done()
         except sqlite3.Error, e:
             print e

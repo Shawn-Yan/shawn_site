@@ -19,7 +19,8 @@ HANDLERS = [
     (r'/', HomeHandler),
     (r'/edit', ArticleEditHandler),
     (r'/article/([^/]+)', ArticleDetailHandler),
-    (r'/outline/$', ArticleOutlineHandler),
+    (r'/outline', ArticleOutlineHandler),
+    (r'/delete', ArticleDeleteHandler),
 ]
 
 UI_MODULES = {
