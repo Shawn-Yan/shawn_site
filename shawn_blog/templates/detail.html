@@ -2,9 +2,9 @@
 
 {% block body %}
 <div class="article">
-  <h1><a href="/article/{{ article.slug }}">{{ article.title }}</a></h1>
-  <div class="date">{{ locale.format_date(article.published, full_format=True, shorter=True) }}</div>
-  <div class="body">{% raw article.html %}</div>
-  <div class="admin"><a href="/edit?id={{ article.id }}">{{ _("Edit this post") }}</a></div>
+  <h1><a href="/article/{{ article['slug'] }}">{{ article['title'] }}</a></h1>
+  <div class="date">{{ article['published'] }}</div>
+  <div class="body">{% raw article['html'] %}</div>
+  <div class="admin"><a href="/edit?id={{ article['id'] }}">{{ _("Edit this post") }}</a></div>
 </div>
 {% end %}

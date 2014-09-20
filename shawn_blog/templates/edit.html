@@ -2,14 +2,14 @@
 
 {% block body %}
   <form action="{{ request.path }}" method="post" class="edit">
-    <div style="margin-bottom:5px"><input name="title" type="text" class="title" value="{{ article.title if article else "" }}"/></div>
-    <div style="margin-bottom:5px"><textarea name="markdown" rows="30" cols="40" class="markdown">{{ article.markdown if article else "" }}</textarea></div>
+    <div style="margin-bottom:5px"><input name="title" type="text" class="title" value="{{ article['title'] if article else "" }}"/></div>
+    <div style="margin-bottom:5px"><textarea name="markdown" rows="30" cols="40" class="markdown">{{ article['markdown'] if article else "" }}</textarea></div>
     <div>
       <input type="submit" value="{{ _("Save changes") if article else _("Publish post") }}" class="submit"/>
-      &nbsp;<a href="{{ "/article/" + article.slug if article else "/" }}">{{ _("Cancel") }}</a>
+      &nbsp;<a href="{{ "/article/" + article['slug'] if article else "/" }}">{{ _("Cancel") }}</a>
     </div>
     {% if article %}
-      <input type="hidden" name="id" value="{{ article.id }}"/>
+      <input type="hidden" name="id" value="{{ article['id'] }}"/>
     {% end %}
     {% module xsrf_form_html() %}
   </form>

@@ -16,7 +16,7 @@ class BaseHandler(RequestHandler):
         user_id = self.get_secure_cookie("blog_user")
         if not user_id:
             return None
-        return self.db.select_int_flag('authors', 'id', int(user_id))
+        return self.db.select_id_flag('authors', int(user_id))
 
 
 class HomeHandler(BaseHandler):
@@ -29,8 +29,8 @@ class ArticleEditHandler(BaseHandler):
         id = self.get_argument("id", None)
         article = None
         if id:
-            article = self.db.select_int_flag('article', 'id', int(id))
-        self.render("edit.html", article=article)
+            article = self.db.select_id_flag('article', int(id))
+        self.render("edit.html", article=article[0])
 
     def post(self):
         id = self.get_argument("id", None)
@@ -38,10 +38,11 @@ class ArticleEditHandler(BaseHandler):
         text = self.get_argument("markdown")
         html = markdown.markdown(text)
         if id:
-            article = self.db.select_int_flag('article', 'id', int(id))
-            if not article:
+            articles = self.db.select_id_flag('article', int(id))
+            if not articles:
                 raise web.HTTPError(404)
-            slug = article.slug
+            article = articles[0]
+            slug = article['slug']
             self.db.update_article(title, text, html, id)
         else:
             slug = unicodedata.normalize("NFKD", title).encode(
@@ -52,7 +53,7 @@ class ArticleEditHandler(BaseHandler):
             if not slug:
                 slug = "article"
             while True:
-                e = self.db.select_str_flag('article', 'slug', slug)
+                e = self.db.select_slug_flag('article', slug)
                 if not e:
                     break
                 slug += "-2"
@@ -63,8 +64,8 @@ class ArticleEditHandler(BaseHandler):
 
 class ArticleDetailHandler(BaseHandler):
     def get(self, slug):
-        article = self.db.select_str_flag('article', 'slug', slug)
-        self.render('detail.html', article=article)
+        article = self.db.select_slug_flag('article', slug)
+        self.render('detail.html', article=article[0])
 
 
 class ArticleOutlineHandler(BaseHandler):

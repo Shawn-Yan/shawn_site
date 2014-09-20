@@ -7,20 +7,19 @@
 
 DROP TABLE IF EXISTS authors;
 CREATE TABLE authors(
-    id INT NOT NULL PRIMARY KEY,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    name VARCHAR(100) NOT NULL
+    id INTEGER PRIMARY KEY,
+    email VARCHAR(100) UNIQUE,
+    name VARCHAR(100)
 );
-
 
 DROP TABLE IF EXISTS article;
 CREATE TABLE article(
-    id INT NOT NULL  PRIMARY KEY,
-    author_id INT NOT NULL REFERENCES authors(id),
-    slug VARCHAR(100) NOT NULL UNIQUE,
-    title VARCHAR(512) NOT NULL,
-    markdown MEDIUMTEXT NOT NULL,
-    html MEDIUMTEXT NOT NULL,
-    published DATETIME NOT NULL,
-    updated TIMESTAMP NOT NULL
+    id INT PRIMARY KEY,
+    author_id INT REFERENCES authors(id),
+    slug VARCHAR(100) UNIQUE,
+    title VARCHAR(512),
+    markdown MEDIUMTEXT,
+    html MEDIUMTEXT,
+    published DATETIME,
+    updated TIMESTAMP
 );

@@ -9,7 +9,6 @@ from _db import *
 from views import *
 
 sub_path = Path(__file__).parent.joinpath
-db_path = Path(__file__).parent / 'db.SQLite3'
 
 MEDIA_DIR = Path(__file__).parent / 'media'
 IMAGE_DIR = MEDIA_DIR / 'image'
@@ -18,7 +17,7 @@ IMAGE_DIR = MEDIA_DIR / 'image'
 # design the handles with views
 HANDLERS = [
     (r'/', HomeHandler),
-    (r'/edit/$', ArticleEditHandler),
+    (r'/edit', ArticleEditHandler),
     (r'/article/([^/]+)', ArticleDetailHandler),
     (r'/outline/$', ArticleOutlineHandler),
 ]
@@ -45,7 +44,7 @@ class BlogApp(web.Application):
         web.Application.__init__(self, HANDLERS, **settings)
 
         # Have one global connection to the blog DB across all handlers
-        self.db = MySQLite(str(db_path))
+        self.db = MySQLite()
 
 
 def main():
