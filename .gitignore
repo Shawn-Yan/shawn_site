@@ -2,4 +2,5 @@ shawn_blog/*.pyc
 shawn_blog/*.sqlite3
 shawn_blog/*.SQLite3
 shawn_blog/schema.sql*
+TODO.md
 DB

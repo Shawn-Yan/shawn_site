@@ -10,8 +10,6 @@ from views import *
 
 sub_path = Path(__file__).parent.joinpath
 
-MEDIA_DIR = Path(__file__).parent / 'media'
-IMAGE_DIR = MEDIA_DIR / 'image'
 
 #TODO
 # design the handles with views
@@ -21,6 +19,8 @@ HANDLERS = [
     (r'/article/([^/]+)', ArticleDetailHandler),
     (r'/outline', ArticleOutlineHandler),
     (r'/delete', ArticleDeleteHandler),
+    (r'/auth/login', AuthLoginHandler),
+    (r'/auth/logout', AuthLogoutHandler),
 ]
 
 UI_MODULES = {
@@ -36,7 +36,6 @@ class BlogApp(web.Application):
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
             ui_modules=UI_MODULES,
-            image_dir=IMAGE_DIR,
             xsrf_cookies=True,
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
             login_url="/auth/login",

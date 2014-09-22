@@ -2,9 +2,12 @@ __author__ = 'shawn'
 
 from tornado.web import RequestHandler
 import markdown
-from tornado import web
+from tornado import web, auth
 import unicodedata
 import re
+
+# no.1 is for me
+author_id = 1
 
 
 class BaseHandler(RequestHandler):
@@ -13,18 +16,20 @@ class BaseHandler(RequestHandler):
         return self.application.db
 
     def get_current_user(self):
-        user_id = self.get_secure_cookie("blog_user")
+        user_id = self.get_secure_cookie("blog_author")
         if not user_id:
             return None
-        return self.db.select_id_flag('authors', int(user_id))
+        author = self.db.select_id_flag('authors', int(author_id))
+        return author
 
 
 class HomeHandler(BaseHandler):
     def get(self):
-        self.render('home.html', title='Home', name='Shawn')
+        self.render('home.html')
 
 
 class ArticleEditHandler(BaseHandler):
+    @web.authenticated
     def get(self):
         id = self.get_argument("id", None)
         article = None
@@ -33,6 +38,7 @@ class ArticleEditHandler(BaseHandler):
             article = articles[0]
         self.render("edit.html", article=article)
 
+    @web.authenticated
     def post(self):
         id = self.get_argument("id", None)
         title = self.get_argument("title")
@@ -80,3 +86,27 @@ class ArticleOutlineHandler(BaseHandler):
     def get(self):
         articles = self.db.select('article')
         self.render('outline.html', articles=articles)
+
+
+class AuthLoginHandler(BaseHandler):
+    @web.asynchronous
+    def get(self):
+        if not self.current_user:
+            self.render('login.html')
+        else:
+            self.redirect(self.get_argument(next), "/")
+
+    @web.asynchronous
+    def post(self):
+        name = self.get_argument('name', None)
+        password = self.get_argument('password', None)
+        if name == "yanxjun" and password == "19900913343x":
+            print("the name and password is correct!")
+            self.set_secure_cookie("blog_author", str(author_id))
+        self.redirect("/")
+
+
+class AuthLogoutHandler(BaseHandler):
+    def get(self):
+        self.clear_cookie("blog_author")
+        self.redirect(self.get_argument("next", "/"))

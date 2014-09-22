@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LOG IN</title>
+</head>
+<body>
+    <form action="{{ request.path }}" method="post" class="edit">
+        姓名:
+        <input type="text" name="name">
+        <br />
+        密码:
+        <input type="password" name="password">
+        <br />
+        <input type="submit" value="{{ _('Login') }}" />
+        {% module xsrf_form_html() %}
+    </form>
+</body>
+</html>

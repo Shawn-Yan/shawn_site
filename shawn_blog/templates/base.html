@@ -9,10 +9,14 @@
   </head>
   <body>
     <div id="body">
-
       <div id="header">
         <div style="float:right">
-            <a href="/edit">{{ _("New post") }}</a>
+            {% if current_user %}
+            <a href="/edit">{{ _("New post") }}</a> ---
+            <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _(" Logout") }}</a>
+            {% else %}
+            <a href="/auth/login?next={{ url_escape(request.uri) }}">{{ _("Login")}}</a>
+            {% end %}
         </div>
         <h1><a href="/">{{ escape(handler.settings["blog_title"]) }}</a></h1>
       </div>

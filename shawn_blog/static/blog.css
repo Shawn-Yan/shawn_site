@@ -1,6 +1,24 @@
+a:link {
+    color: #3b5998;
+    text-decoration:none;
+}
+
+a:visited {
+    color: #3b5998;
+    text-decoration:none;
+}
+
+a:hover {
+    color: #00FF00;
+    text-decoration:underline;
+}
+
+a:active {
+    text-decoration:underline;
+}
 
 body {
-  background: white;
+  background-color: #DBDBDB;
   color: black;
   margin: 15px;
   margin-top: 0;
@@ -46,11 +64,6 @@ pre {
   padding-left: 1em;
   border-left: 1px solid silver;
   line-height: 14pt;
-}
-
-a,
-a code {
-  color: #00c;
 }
 
 #body {
