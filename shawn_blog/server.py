@@ -32,7 +32,7 @@ class BlogApp(web.Application):
     def __init__(self, options):
 
         settings = dict(
-            blog_title=u"Shawn Blog",
+            blog_title=u"Shawn's Blog",
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
             ui_modules=UI_MODULES,
