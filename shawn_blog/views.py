@@ -25,7 +25,8 @@ class BaseHandler(RequestHandler):
 
 class HomeHandler(BaseHandler):
     def get(self):
-        self.render('home.html')
+        articles = self.db.select('article')
+        self.render('home.html', articles=articles)
 
 
 class ArticleEditHandler(BaseHandler):
@@ -110,3 +111,4 @@ class AuthLogoutHandler(BaseHandler):
     def get(self):
         self.clear_cookie("blog_author")
         self.redirect(self.get_argument("next", "/"))
+

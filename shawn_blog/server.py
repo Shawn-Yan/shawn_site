@@ -7,6 +7,7 @@ from pathlib import Path
 
 from _db import *
 from views import *
+from uimodules import EntryModule
 
 sub_path = Path(__file__).parent.joinpath
 
@@ -23,10 +24,6 @@ HANDLERS = [
     (r'/auth/logout', AuthLogoutHandler),
 ]
 
-UI_MODULES = {
-
-}
-
 
 class BlogApp(web.Application):
     def __init__(self, options):
@@ -35,7 +32,7 @@ class BlogApp(web.Application):
             blog_title=u"Shawn's Blog",
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
-            ui_modules=UI_MODULES,
+            ui_modules={"Entry": EntryModule},
             xsrf_cookies=True,
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
             login_url="/auth/login",

@@ -33,6 +33,28 @@
         </div>
         <div id="footer">Copyright © 2013-2014 <a href="http://www.loencn.com/">Shawn's Blog</a></div>
     </div>
+
+    <div id="container2" style="width: 1041px; left: 296px;">
+        <div id="map">
+            <div class="position">Location:</div>
+            <div style="float: right; width: 175px; font-size:120%;">
+                {% if current_user %}
+                <a href="/edit">{{ _("New post") }}</a>--
+                <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _(" Logout") }}</a>
+                {% else %}
+                <a href="/auth/login?next={{ url_escape(request.uri) }}" style="float: right; width: 85px;">{{ _("Login")}}</a>
+                {% end %}
+            </div>
+         </div>
+         <div id="content">
+             <div id="main">
+                 {% for article in articles %}
+                 {% module Entry(article) %}
+                 {% end %}
+             </div>
+         </div>
+     </div>
+
 </div>
 </body>
 </html>
