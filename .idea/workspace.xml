@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shawn_blog/static/blog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shawn_blog/templates/about_me.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shawn_blog/templates/type.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/_db.py" afterPath="$PROJECT_DIR$/shawn_blog/_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/modules/article.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/modules/article.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/base.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/blog.css" afterPath="$PROJECT_DIR$/shawn_blog/static/blog.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/db.SQLite3" afterPath="$PROJECT_DIR$/shawn_blog/db.SQLite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/delete.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/detail.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/edit.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/home.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/manage.py" afterPath="$PROJECT_DIR$/shawn_blog/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/schema.sql" afterPath="$PROJECT_DIR$/shawn_blog/schema.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/server.py" afterPath="$PROJECT_DIR$/shawn_blog/server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/views.py" afterPath="$PROJECT_DIR$/shawn_blog/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,8 +42,8 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shawn_blog/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="216">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="288">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -47,8 +52,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="2214">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1901" max-vertical-offset="2610">
+              <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
               <folding>
                 <element signature="e#22#60#0" expanded="true" />
               </folding>
@@ -56,11 +61,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="864">
+              <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about_me.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/about_me.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="type.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/type.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28222996" vertical-offset="0" max-vertical-offset="574">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1080">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shawn_blog/templates/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48128343" vertical-offset="0" max-vertical-offset="972">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="1044">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -70,47 +117,6 @@
                 <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#2;n#form#0;n#!!top" expanded="true" />
                 <element signature="tag#script#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shawn_blog/static/blog.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3240">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667" vertical-offset="216" max-vertical-offset="1134">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#a#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,15 +140,11 @@
         <option value="$PROJECT_DIR$/shawn_blog/templates/articles/article_detail.html" />
         <option value="$PROJECT_DIR$/shawn_blog/models.py" />
         <option value="$PROJECT_DIR$/shawn_blog/models.sqlit3" />
-        <option value="$PROJECT_DIR$/shawn_blog/manage.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/shawn_blog/static/blog.css.html" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/articles/article_edit.html" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/articles/edit.html" />
-        <option value="$PROJECT_DIR$/shawn_blog/schema.sql" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/outline.html" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/delete.html" />
-        <option value="$PROJECT_DIR$/shawn_blog/_db.py" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/login.html" />
         <option value="$USER_HOME$/Documents/blog.html" />
         <option value="$PROJECT_DIR$/DB/wp-code-highlight.css" />
@@ -154,15 +156,21 @@
         <option value="$PROJECT_DIR$/shawn_blog/templates/model/article.html" />
         <option value="$PROJECT_DIR$/shawn_blog/uimodules.py" />
         <option value="$PROJECT_DIR$/shawn_blog/static/style.css" />
-        <option value="$PROJECT_DIR$/shawn_blog/server.py" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/home.html" />
-        <option value="$PROJECT_DIR$/shawn_blog/views.py" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/modules/article.html" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/detail.html" />
         <option value="$PROJECT_DIR$/shawn_blog/static/blog.js" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/base.html" />
         <option value="$PROJECT_DIR$/shawn_blog/static/blog.css" />
+        <option value="$PROJECT_DIR$/shawn_blog/schema.sql" />
+        <option value="$PROJECT_DIR$/shawn_blog/manage.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/modules/article.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/delete.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/_db.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/server.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/about_me.html" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/edit.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/base.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/home.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/detail.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/views.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/type.html" />
       </list>
     </option>
   </component>
@@ -536,21 +544,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="1476">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="648">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="558">
@@ -636,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059900165" vertical-offset="0" max-vertical-offset="601">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/shawn_site.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2425876" vertical-offset="0" max-vertical-offset="371">
@@ -700,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tornado/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327787" vertical-offset="9934" max-vertical-offset="53874">
-          <caret line="596" column="8" selection-start-line="596" selection-start-column="8" selection-end-line="596" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tornado/auth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3327787" vertical-offset="2158" max-vertical-offset="26496">
@@ -725,13 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.095914744" vertical-offset="0" max-vertical-offset="563">
           <caret line="3" column="6903" selection-start-line="3" selection-start-column="6903" selection-end-line="3" selection-end-column="6903" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2286">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -770,30 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8930482" vertical-offset="0" max-vertical-offset="1584">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="63" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59900165" vertical-offset="0" max-vertical-offset="601">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/uimodules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
@@ -812,26 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/modules/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="792">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#h2#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="396">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39130434" vertical-offset="0" max-vertical-offset="552">
@@ -840,49 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4171123" vertical-offset="0" max-vertical-offset="792">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#h2#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="2214">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#22#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76480836" vertical-offset="11" max-vertical-offset="612">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/static/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8125" vertical-offset="72" max-vertical-offset="648">
           <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="216">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -905,45 +794,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/static/blog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3240">
+        <state vertical-scroll-proportion="0.14975041" vertical-offset="0" max-vertical-offset="3240">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tornado/web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667" vertical-offset="216" max-vertical-offset="1134">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#a#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3327787" vertical-offset="17386" max-vertical-offset="53874">
+          <caret line="1010" column="8" selection-start-line="1010" selection-start-column="8" selection-end-line="1010" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14975041" vertical-offset="0" max-vertical-offset="601">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39267886" vertical-offset="1798" max-vertical-offset="2484">
+          <caret line="114" column="76" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2820037" vertical-offset="532" max-vertical-offset="1584">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33876812" vertical-offset="11" max-vertical-offset="612">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/about_me.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/templates/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48128343" vertical-offset="0" max-vertical-offset="972">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="1044">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -954,6 +870,74 @@
             <element signature="n#style#0;n#textarea#0;n#div#2;n#form#0;n#!!top" expanded="true" />
             <element signature="tag#script#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11956522" vertical-offset="582" max-vertical-offset="1134">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="288">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/modules/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31729054" vertical-offset="182" max-vertical-offset="792">
+          <caret line="20" column="115" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1080">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="864">
+          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1901" max-vertical-offset="2610">
+          <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
+          <folding>
+            <element signature="e#22#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/type.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28222996" vertical-offset="0" max-vertical-offset="574">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

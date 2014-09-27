@@ -21,13 +21,13 @@
             </form>
         </div>
         <div id="nav">
-            <a href="/programming_language" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Language</a>
-            <a href="/operating_system" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Operating System</a>
-            <a href="/database" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Database</a>
-            <a href="/network" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Network</a>
-            <a href="/algorithm" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Algorithm</a>
-            <a href="/my_life" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>My Life</a>
-            <a href="/other" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>Other</a>
+            <a href="/type/programming_language" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Language</a>
+            <a href="/type/operating_system" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Operating System</a>
+            <a href="/type/database" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Database</a>
+            <a href="/type/network" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Network</a>
+            <a href="/type/algorithm" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Algorithm</a>
+            <a href="/type/my_life" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>My Life</a>
+            <a href="/type/other" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>Other</a>
             <a href="/about" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>About me</a>
         </div>
         <div>
@@ -37,7 +37,7 @@
 
     <div id="container2" style="width: 1041px; left: 296px;">
         <div id="map">
-            <div class="position">Location:</div>
+            <div class="position">Location:>  {% block top %}{% end %} </div>
             <div style="float: right; width: 175px; font-size:120%;">
                 {% if current_user %}
                 <a href="/edit">{{ _("New post") }}</a>--

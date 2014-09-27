@@ -22,6 +22,8 @@ HANDLERS = [
     (r'/delete', ArticleDeleteHandler),
     (r'/auth/login', AuthLoginHandler),
     (r'/auth/logout', AuthLogoutHandler),
+    (r'/type/([^/]+)', ArticleTypeHandler),
+    (r'/about', AboutMeHandler),
 ]
 
 

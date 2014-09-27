@@ -46,6 +46,9 @@ class MySQLite:
                              "title VARCHAR(512),"
                              "markdown MEDIUMTEXT,"
                              "html MEDIUMTEXT,"
+                             "thumbnail MEDIUMTEXT,"
+                             "type VARCHAR(10),"
+                             "read_count INT,"
                              "published DATETIME,"
                              "updated TIMESTAMP)")
             self.done()
@@ -61,11 +64,11 @@ class MySQLite:
             print e
             self.conn.rollback()
 
-    def insert_article(self, author_id, title, slug, markdown, html):
+    def insert_article(self, author_id, title, slug, markdown, html, type, thumbnail):
         try:
-            self.cur.execute("INSERT INTO article (author_id,title,slug,markdown,html,published)"
-                             "VALUES ('%s','%s','%s','%s','%s',CURRENT_TIMESTAMP)"
-                             % (author_id, title, slug, markdown, html))
+            self.cur.execute("INSERT INTO article (author_id,title,slug,markdown,html,published,type,thumbnail)"
+                             "VALUES ('%s','%s','%s','%s','%s',CURRENT_TIMESTAMP,'%s','%s')"
+                             % (author_id, title, slug, markdown, html, type, thumbnail))
             self.done()
         except sqlite3.Error, e:
             print e, "insert_article"
@@ -102,6 +105,14 @@ class MySQLite:
     def select_slug_flag(self, table, flag):
         try:
             self.cur.execute("SELECT * FROM '%s' WHERE slug = '%s'" % (table, flag))
+            rows = self.cur.fetchall()
+            return rows
+        except sqlite3.Error, e:
+            print "Error %s:" % e.args[0]
+
+    def select_type_flag(self, table, flag):
+        try:
+            self.cur.execute("SELECT * FROM '%s' WHERE type = '%s'" % (table, flag))
             rows = self.cur.fetchall()
             return rows
         except sqlite3.Error, e:

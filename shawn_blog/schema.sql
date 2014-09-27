@@ -20,6 +20,9 @@ CREATE TABLE article(
     title VARCHAR(512),
     markdown MEDIUMTEXT,
     html MEDIUMTEXT,
+    thumbnail MEDIUMTEXT,
+    type VARCHAR(10),
+    read_count INT,
     published DATETIME,
     updated TIMESTAMP
 );

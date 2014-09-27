@@ -6,9 +6,11 @@ from tornado import web, auth
 import unicodedata
 import re
 from datetime import datetime
+import urllib
 
 # no.1 is for me
 author_id = 1
+max_len = 200
 
 
 class BaseHandler(RequestHandler):
@@ -46,6 +48,12 @@ class ArticleEditHandler(BaseHandler):
         title = self.get_argument("title")
         text = self.get_argument("markdown")
         html = markdown.markdown(text)
+        type = self.get_argument("type")
+        text_len = len(text)
+        if text_len > max_len:
+            thumbnail = text[0:max_len]
+        else:
+            thumbnail = text
         if id:
             articles = self.db.select_id_flag('article', int(id))
             if not articles:
@@ -60,19 +68,21 @@ class ArticleEditHandler(BaseHandler):
             slug = "-".join(slug.lower().strip().split())
 
             if not slug:
-                slug = "article"
+                slug = urllib.quote(title.encode('utf8'))
+
             while True:
                 e = self.db.select_slug_flag('article', slug)
                 if not e:
                     break
                 slug += "-2"
             self.current_user_id = 1
-            self.db.insert_article(self.current_user_id, title, slug, text, html)
+            self.db.insert_article(self.current_user_id, title, slug, text, html, type, thumbnail)
         self.redirect("/article/" + slug)
 
 
 class ArticleDetailHandler(BaseHandler):
     def get(self, slug):
+        slug = urllib.quote(slug.encode('utf8'))
         article = self.db.select_slug_flag('article', slug)
         article_date = article[0]['published']
         art_date = datetime.strptime(article_date, "%Y-%m-%d %H:%M:%S")
@@ -93,14 +103,14 @@ class ArticleOutlineHandler(BaseHandler):
 
 
 class AuthLoginHandler(BaseHandler):
-    @web.asynchronous
+    # @web.asynchronous
     def get(self):
         if not self.current_user:
             self.render('login.html')
         else:
             self.redirect(self.get_argument(next), "/")
 
-    @web.asynchronous
+    # @web.asynchronous
     def post(self):
         name = self.get_argument('name', None)
         password = self.get_argument('password', None)
@@ -114,4 +124,16 @@ class AuthLogoutHandler(BaseHandler):
     def get(self):
         self.clear_cookie("blog_author")
         self.redirect(self.get_argument("next", "/"))
+
+
+class ArticleTypeHandler(BaseHandler):
+    def get(self, type_):
+        table = "article"
+        articles = self.db.select_type_flag(table, type_)
+        self.render('type.html', articles=articles, type_=type_)
+
+
+class AboutMeHandler(BaseHandler):
+    def get(self):
+        self.render('about_me.html')
 

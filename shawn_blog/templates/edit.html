@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
+{% block top %}
+        <a href="/edit">edit</a>
+{% end %}
+
 {% block body %}
-  <form onload="init();" action="{{ request.path }}" method="post" class="edit" >
+  <form action="{{ request.path }}" method="post" class="edit" >
     <div style="margin-bottom:10px">
         <span><input style="font-size:16pt;border-width:1px 6px;border-style:solid;padding:8px;border-color:#0088dd;" name="title" type="text" class="title" value="{{ article['title'] if article else '' }}" size="70"/></span>
 
