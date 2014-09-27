@@ -1,3 +1,11 @@
+textarea {
+    font-size:16pt;
+    border-width:1px;
+    border-style:solid;
+    padding:8px;
+    border-color:#0088dd;
+}
+
 a:link {
     color: #3b5998;
     text-decoration:none;

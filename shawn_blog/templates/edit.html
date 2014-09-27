@@ -1,12 +1,39 @@
 {% extends "base.html" %}
 
 {% block body %}
-  <form action="{{ request.path }}" method="post" class="edit">
-    <div style="margin-bottom:5px"><input name="title" type="text" class="title" value="{{ article['title'] if article else "" }}"/></div>
-    <div style="margin-bottom:5px"><textarea name="markdown" rows="30" cols="40" class="markdown">{{ article['markdown'] if article else "" }}</textarea></div>
+  <form onload="init();" action="{{ request.path }}" method="post" class="edit" >
+    <div style="margin-bottom:10px">
+        <span><input style="font-size:16pt;border-width:1px 6px;border-style:solid;padding:8px;border-color:#0088dd;" name="title" type="text" class="title" value="{{ article['title'] if article else '' }}" size="70"/></span>
+
+    </div>
+    <div style="margin-bottom:20px">&nbsp;
+        <span><b style="color:#0088dd;">Select Type:</b></span>&nbsp;&nbsp;
+        <span>
+            <select name="type" style="font-size:10pt; background-color:#FFFFFFFF;">
+                <option value="other">Other</option>
+                <option value="programming_language">Language</option>
+                <option value="operating_system">OP</option>
+                <option value="database">DB</option>
+                <option value="network">NET</option>
+                <option value="algorithm">Algorithm</option>
+                <option value="my_life">My Life</option>
+            </select>
+        </span>
+    </div>
+    <div style="margin-bottom:5px">
+        <textarea style="font-size:10pt;border-width:1px;border-style:solid;padding:8px;border-color:#0088dd;" id="text" name="markdown" rows="30" cols="120" class="markdown">{{ article['markdown'] if article else "" }}</textarea>
+    </div>
     <div>
+        <style>
+            input[type="submit"]{
+            background-color: #0088dd;
+            color: #fff;
+            border-radius: 5px;
+            font-size:15pt;
+            }
+        </style>
       <input type="submit" value="{{ _('Save changes') if article else _('Publish post') }}" class="submit"/>
-      &nbsp;<a href="{{ "/article/" + article['slug'] if article else "/" }}">{{ _("Cancel") }}</a>
+      &nbsp; &nbsp; &nbsp;<a href="{{ '/article/' + article['slug'] if article else '/' }}">{{ _("Cancel") }}</a>
     </div>
     {% if article %}
       <input type="hidden" name="id" value="{{ article['id'] }}"/>

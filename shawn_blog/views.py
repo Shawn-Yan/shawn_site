@@ -5,6 +5,7 @@ import markdown
 from tornado import web, auth
 import unicodedata
 import re
+from datetime import datetime
 
 # no.1 is for me
 author_id = 1
@@ -73,7 +74,9 @@ class ArticleEditHandler(BaseHandler):
 class ArticleDetailHandler(BaseHandler):
     def get(self, slug):
         article = self.db.select_slug_flag('article', slug)
-        self.render('detail.html', article=article[0])
+        article_date = article[0]['published']
+        art_date = datetime.strptime(article_date, "%Y-%m-%d %H:%M:%S")
+        self.render('detail.html', article=article[0], art_date=art_date)
 
 
 class ArticleDeleteHandler(BaseHandler):

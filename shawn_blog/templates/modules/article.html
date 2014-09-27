@@ -5,14 +5,14 @@
             <span class="date_ym">{{ art_date.year }}.{{ art_date.month }}</span>
         </div>
         <div class="article">
-            <h2><a href="/article/{{ article['slug'] }}" title="{{article['title']}}" style="margin-left: 30px;">{{ article['title'] }}</a>
+            <h2><a href="/article/{{ article['slug'] }}" title="{{article['title']}}" style="margin-left: 0px;">{{ article['title'] }}</a>
                 <span class="new" style="margin-left: 8px;"></span>
             </h2>
 
-            <div class="infotop">
-                <span class="info-category-icon"></span>
-                <span class="info-view-icon">Read:<b>todo</b></span>
-                <span class="info-comment-icon">Reply:todo</span>
+            <div class="infotop" style="margin-left: -2px;">
+                <span class="info-view-icon">Type:<a>todo</a></span>
+                <span class="info-view-icon">Read:<a>todo</a></span>
+                <span class="info-view-icon">Rep:<a>todo</a></span>
             </div>
 
             <div class="thumbnail_box">
@@ -23,7 +23,7 @@
             </div>
 
             <div class="entry_post">
-                <span></span>
+                <span>{{ article['markdown'] }}</span>
 
                 <div class="clear"></div>
                 <div class="infobot">

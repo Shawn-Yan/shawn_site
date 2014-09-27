@@ -1,28 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>{{ str(handler.settings["blog_title"]) }}</title>
-    <link rel="stylesheet" href="{{ static_url('blog.css') }}" type="text/css"/>
-    <link rel="alternate" href="/feed" type="application/atom+xml" title="{{ escape(handler.settings['blog_title']) }}"/>
-    {% block head %}{% end %}
-  </head>
-  <body>
-    <div id="body">
-      <div id="header">
-        <div style="float:right">
-            {% if current_user %}
-            <a href="/edit">{{ _("New post") }}</a> ---
-            <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _(" Logout") }}</a>
-            {% else %}
-            <a href="/auth/login?next={{ url_escape(request.uri) }}">{{ _("Login")}}</a>
-            {% end %}
+<head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ str(handler.settings["blog_title"]) }} | Just Do It.</title>
+    <link rel="icon" href="media/image/bg.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="{{ static_url('style.css') }}">
+    <script type="text/javascript" src="{{ static_url('shawn.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('blog.js') }}"></script>
+</head>
+<body>
+<div id="page">
+    <div id="container1" style="left: 0px; height: 469px;">
+        <div id="logo">
+            <a title="back_home" href="/"><b></b>Shawn<i>©</i></a>
         </div>
-        <h1><a href="/">{{ str(handler.settings["blog_title"]) }}</a></h1>
-      </div>
-
-      <div id="content">{% block body %}{% end %}</div>
+        <div class="search_site addapted">
+            <form id="search_form" method="get" action="/">
+                <input type="submit" value="" id="search_submit" class="button">
+                <input type="text" id="s" name="s" value="">
+                <span>Search</span>
+            </form>
+        </div>
+        <div id="nav">
+            <a href="/programming_language" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Language</a>
+            <a href="/operating_system" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Operating System</a>
+            <a href="/database" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Database</a>
+            <a href="/network" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Network</a>
+            <a href="/algorithm" style="margin-top: 9.375px;"><b style="height: 30.625px;"></b>Algorithm</a>
+            <a href="/my_life" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>My Life</a>
+            <a href="/other" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>Other</a>
+            <a href="/about" style="margin-top: 9.375px; margin-left: 0px;"><b style="height: 30.625px;"></b>About me</a>
+        </div>
+        <div>
+        </div>
+        <div id="footer">Copyright © 2014-2015 <a href="/">Shawn's Blog</a></div>
     </div>
-    {% block bottom %}{% end %}
-  </body>
+
+    <div id="container2" style="width: 1041px; left: 296px;">
+        <div id="map">
+            <div class="position">Location:</div>
+            <div style="float: right; width: 175px; font-size:120%;">
+                {% if current_user %}
+                <a href="/edit">{{ _("New post") }}</a>--
+                <a href="/auth/logout?next={{ url_escape(request.uri) }}">{{ _(" Logout") }}</a>
+                {% else %}
+                <a href="/auth/login?next={{ url_escape(request.uri) }}" style="float: right; width: 85px;">{{ _("Login")}}</a>
+                {% end %}
+            </div>
+         </div>
+         <div id="content">
+             <div id="main">
+                 {% block body %}{% end %}
+             </div>
+         </div>
+     </div>
+</div>
+</body>
 </html>
