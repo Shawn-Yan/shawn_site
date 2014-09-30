@@ -11,3 +11,9 @@
 
 #run server
 python server.py -port=8080
+
+
+#TODO 
+1.Complete the search function in article titile and content
+2.count read and comment in DB
+
