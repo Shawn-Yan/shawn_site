@@ -11,7 +11,7 @@
             <span class="date_d">{{ art_date.day }}</span>
             <span class="date_ym">{{ art_date.year }}.{{ art_date.month }}</span>
         </div>
-        <div class="article">
+        <div class="article_detail">
             <h2><a href="/article/{{ article['slug'] }}" title="{{article['title']}}" style="margin-left: 0px;">{{ article['title'] }}</a>
                 <span class="new" style="margin-left: 8px;"></span>
             </h2>
@@ -30,7 +30,7 @@
                 <span >Read:<a href="/">todo</a></span>&nbsp
                 <span >Reply:<a href="/">todo</a></span>
             </div>
-
+            <br />
             <div class="entry_post">
                 <span>{{ article['markdown'] }}</span>
 
