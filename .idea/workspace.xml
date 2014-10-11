@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/_db.py" afterPath="$PROJECT_DIR$/shawn_blog/_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/base.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/blog.js" afterPath="$PROJECT_DIR$/shawn_blog/static/blog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/db.SQLite3" afterPath="$PROJECT_DIR$/shawn_blog/db.SQLite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/edit.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/views.py" afterPath="$PROJECT_DIR$/shawn_blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="" />
     <ignored path="shawn_site.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
