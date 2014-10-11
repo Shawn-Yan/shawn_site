@@ -4,8 +4,16 @@
     <title>{{ str(handler.settings["blog_title"]) }} | Just Do It.</title>
     <link rel="icon" href="media/image/bg.jpg" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="{{ static_url('style.css') }}">
+
+    <link rel="stylesheet" href="{{ static_url('kindeditor/themes/default/default.css') }}" />
+    <link rel="stylesheet" href="{{ static_url('kindeditor/plugins/code/prettify.css') }} " />
+    <script charset="utf-8" src="{{ static_url('kindeditor/kindeditor.js') }}"></script>
+    <script charset="utf-8" src="{{ static_url('kindeditor/lang/zh_CN.js') }}"></script>
+    <script charset="utf-8" src="{{ static_url('kindeditor/plugins/code/prettify.js') }}"></script>
+
     <script type="text/javascript" src="{{ static_url('shawn.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('blog.js') }}"></script>
+
 </head>
 <body>
 <div id="page">

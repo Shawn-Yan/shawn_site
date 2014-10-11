@@ -1,7 +1,7 @@
 __author__ = 'shawn'
 
 from tornado.web import RequestHandler
-import markdown
+import html2text
 from tornado import web, auth
 import unicodedata
 import re
@@ -46,8 +46,8 @@ class ArticleEditHandler(BaseHandler):
     def post(self):
         id = self.get_argument("id", None)
         title = self.get_argument("title")
-        text = self.get_argument("markdown")
-        html = markdown.markdown(text)
+        html = self.get_argument("markdown")
+        text = html2text.html2text(html)
         type = self.get_argument("type")
         text_len = len(text)
         if text_len > max_len:
@@ -60,7 +60,7 @@ class ArticleEditHandler(BaseHandler):
                 raise web.HTTPError(404)
             article = articles[0]
             slug = article['slug']
-            self.db.update_article(title, text, html, id)
+            self.db.update_article(title, text, html, thumbnail, id)
         else:
             slug = unicodedata.normalize("NFKD", title).encode(
                 "ascii", "ignore")

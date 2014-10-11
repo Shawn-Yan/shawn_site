@@ -71,14 +71,15 @@ class MySQLite:
                              % (author_id, title, slug, markdown, html, type, thumbnail))
             self.done()
         except sqlite3.Error, e:
-            print e, "insert_article"
+            print e, "insert_article error***"
             self.conn.rollback()
 
-    def update_article(self, title, text, html, id):
+    def update_article(self, title, text, html, thumbnail, id):
         try:
 
-            self.cur.execute("UPDATE article SET title = '%s', markdown = '%s', html = '%s' WHERE id = '%s'"
-                             % (title, text, html, int(id)))
+            self.cur.execute("UPDATE article SET title = '%s', markdown = '%s', html = '%s', "
+                             "thumbnail ='%s' WHERE id = '%s'"
+                             % (title, text, html, thumbnail, int(id)))
             self.done()
         except sqlite3.Error, e:
             print e
