@@ -31,9 +31,8 @@
                 <span >Reply:<a href="/">todo</a></span>
             </div>
             <br />
-            <div class="entry_post">
-                <span>{{ article['markdown'] }}</span>
-
+            <div class="entry_post" id="entry_post">
+                <span> {% raw article['html'] %}</span>
                 <div class="clear"></div>
             </div>
         </div>
