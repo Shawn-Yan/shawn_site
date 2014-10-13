@@ -1,7 +1,7 @@
 #this is a web server#
 
-##@author Shawn Yan
-##@E-mail yanxjun1990@gmail.com
+-author Shawn Yan
+-E-mail yanxjun1990@gmail.com
 
 #Dependencies:
 -python 3.4.X
@@ -14,7 +14,9 @@
 
 
 #TODO 
-##1.fix the kindeditor bug when i copy from other pages
-##2.Complete the search function in article titile and content
-##2.count read and comment in DB
+-1.kindeditor font problem
+-2.selected all can delete all problem
+-3.upload image
+-4. complete the search function in article titil
+-5.and count and comment in DB
 

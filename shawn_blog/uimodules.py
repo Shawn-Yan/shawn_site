@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-s
 __author__ = 'shawn'
 
 from tornado import web

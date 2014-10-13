@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 __author__ = 'shawn'
 
 from datetime import datetime

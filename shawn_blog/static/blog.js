@@ -1,22 +1,22 @@
 KindEditor.ready(function(K) {
-var editor1 = K.create('textarea[name="markdown"]', {
-        cssPath : "{{ static_url('kindeditor/plugins/code/prettify.css') }}",
-        uploadJson : '/upload/',
-        fileManagerJson : '/upload/',
-        allowFileManager : true,
-        afterCreate : function() {
+    var editor1 = K.create('textarea[name="markdown"]', {
+    cssPath : "{{ static_url('kindeditor/plugins/code/prettify.css') }}",
+    uploadJson : '/upload/',
+    fileManagerJson : '/upload/',
+    allowFileManager : true,
+    afterCreate : function() {
         var self = this;
         K.ctrl(document, 13, function() {
-        self.sync();
-        K('form[name=edit]')[0].submit();
-        });
+            self.sync();
+            K('form[name=edit]')[0].submit();
+            });
         K.ctrl(self.edit.doc, 13, function() {
-        self.sync();
-        K('form[name=edit]')[0].submit();
-        });
+            self.sync();
+            K('form[name=edit]')[0].submit();
+            });
         }
-        });
-        prettyPrint();
+    });
+    prettyPrint();
 });
 
 var observe;

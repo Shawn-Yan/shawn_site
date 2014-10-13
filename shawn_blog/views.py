@@ -1,8 +1,9 @@
+# -*- coding:utf-8 -*-
 __author__ = 'shawn'
 
 from tornado.web import RequestHandler
 import html2text
-from tornado import web, auth
+from tornado import web, auth, escape
 import unicodedata
 import re
 from datetime import datetime

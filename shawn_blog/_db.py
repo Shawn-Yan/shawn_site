@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 __author__ = 'shawn'
 
 import sqlite3
@@ -71,7 +72,7 @@ class MySQLite:
                              % (author_id, title, slug, markdown, html, type, thumbnail))
             self.done()
         except sqlite3.Error, e:
-            print e, "insert_article error***"
+            print e.args, "insert_article error***"
             self.conn.rollback()
 
     def update_article(self, title, text, html, thumbnail, id):

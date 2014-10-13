@@ -36,7 +36,7 @@
             font-size:15pt;
             }
         </style>
-      <input type="submit" value="{{ _('Save changes') if article else _('Publish post') }}" class="submit"/>
+      <input type="submit" value="{{ _('Save changes') if article else _('Publish post') }}" class="submit" />
       &nbsp; &nbsp; &nbsp;<a href="{{ '/article/' + article['slug'] if article else '/' }}">{{ _("Cancel") }}</a>
     </div>
     {% if article %}
@@ -67,5 +67,7 @@
     });
 
   //]]>
-  </script>
+
+</script>
+
 {% end %}
