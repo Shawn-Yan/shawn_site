@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp.net/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp.net/bin/LitJSON.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp.net/demo.aspx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp.net/file_manager_json.ashx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp.net/upload_json.ashx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp/JSON_2.0.4.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp/UpLoad_Class.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp/demo.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp/file_manager_json.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/asp/upload_json.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/demo.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/file_manager_json.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/lib/commons-fileupload-1.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/lib/commons-io-1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/lib/json_simple-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/jsp/upload_json.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/php/JSON.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/php/demo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/php/file_manager_json.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/php/upload_json.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/db.SQLite3" afterPath="$PROJECT_DIR$/shawn_blog/db.SQLite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/plugins/code/prettify.css" afterPath="$PROJECT_DIR$/shawn_blog/static/kindeditor/plugins/code/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="" />
     <ignored path="shawn_site.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +46,8 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27745664" vertical-offset="162" max-vertical-offset="2628">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.5202312" vertical-offset="162" max-vertical-offset="2628">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
                 <element signature="e#45#83#0" expanded="true" />
               </folding>
@@ -822,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27745664" vertical-offset="162" max-vertical-offset="2628">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.5202312" vertical-offset="162" max-vertical-offset="2628">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="e#45#83#0" expanded="true" />
           </folding>
