@@ -242,4 +242,14 @@ class KeFileUploadHandler(BaseHandler):
 
 class SearchHandler(BaseHandler):
     def get(self, *args, **kwargs):
-        self.render('about_me.html')
+        search_text = self.get_argument('search_text')
+        articles = []
+        if not search_text:
+            self.redirect("/")
+        else:
+            all_articles = self.db.select('article')
+            for temp in all_articles:
+                search_text.lower()
+                if search_text in temp['title'].lower():
+                    articles.append(temp)
+        self.render('search_result.html', articles=articles)

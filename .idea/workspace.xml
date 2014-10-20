@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e7eef8-ac1c-4911-a310-eabeabcb39c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/blog.js" afterPath="$PROJECT_DIR$/shawn_blog/static/blog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/db.SQLite3" afterPath="$PROJECT_DIR$/shawn_blog/db.SQLite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/server.py" afterPath="$PROJECT_DIR$/shawn_blog/server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/style.css" afterPath="$PROJECT_DIR$/shawn_blog/static/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shawn_blog/templates/search_result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/templates/base.html" afterPath="$PROJECT_DIR$/shawn_blog/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/views.py" afterPath="$PROJECT_DIR$/shawn_blog/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shawn_blog/static/kindeditor/lang/zh_CN.js" afterPath="$PROJECT_DIR$/shawn_blog/static/kindeditor/lang/zh_CN.js" />
     </list>
     <ignored path="shawn_site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,17 +32,7 @@
         <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
-              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shawn_blog/static/blog.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="1044">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -54,8 +41,30 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93877554" vertical-offset="3660" max-vertical-offset="4320">
-              <caret line="244" column="36" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.8469388" vertical-offset="4038" max-vertical-offset="4680">
+              <caret line="252" column="55" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
+              <folding>
+                <element signature="e#45#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_result.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/search_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="288">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="594" max-vertical-offset="1278">
+              <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -64,8 +73,8 @@
       <file leaf-file-name="_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shawn_blog/_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="2520">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.259259" vertical-offset="614" max-vertical-offset="2520">
+              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -109,12 +118,10 @@
         <option value="$PROJECT_DIR$/shawn_blog/templates/modules/article.html" />
         <option value="$PROJECT_DIR$/DB/style.css" />
         <option value="$PROJECT_DIR$/DB/kindeditor.txt" />
-        <option value="$PROJECT_DIR$/shawn_blog/templates/base.html" />
         <option value="$PROJECT_DIR$/DB/edit.html" />
         <option value="$PROJECT_DIR$/DB/detail.html" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/detail.html" />
         <option value="$PROJECT_DIR$/DB/blog.js" />
-        <option value="$PROJECT_DIR$/shawn_blog/_db.py" />
         <option value="$PROJECT_DIR$/shawn_blog/manage.py" />
         <option value="$PROJECT_DIR$/shawn_blog/models.py" />
         <option value="$PROJECT_DIR$/shawn_blog/templates/edit.html" />
@@ -132,6 +139,10 @@
         <option value="$PROJECT_DIR$/shawn_blog/static/blog.js" />
         <option value="$PROJECT_DIR$/shawn_blog/static/style.css" />
         <option value="$PROJECT_DIR$/shawn_blog/server.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/base.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/search.html" />
+        <option value="$PROJECT_DIR$/shawn_blog/_db.py" />
+        <option value="$PROJECT_DIR$/shawn_blog/templates/search_result.html" />
         <option value="$PROJECT_DIR$/shawn_blog/views.py" />
       </list>
     </option>
@@ -540,20 +551,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="432">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB/kindeditor.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.228223" vertical-offset="1417" max-vertical-offset="2736">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/templates/outline.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="306">
@@ -811,14 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python2.7/distutils/filelist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7237937" vertical-offset="321" max-vertical-offset="6210">
@@ -844,14 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08319467" vertical-offset="1822" max-vertical-offset="3240">
           <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2508711" vertical-offset="270" max-vertical-offset="1278">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -882,16 +863,50 @@
     <entry file="file://$PROJECT_DIR$/shawn_blog/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/type.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31358886" vertical-offset="0" max-vertical-offset="574">
+          <caret line="10" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="594" max-vertical-offset="1278">
+          <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.259259" vertical-offset="614" max-vertical-offset="2520">
+          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shawn_blog/templates/search_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shawn_blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93877554" vertical-offset="3660" max-vertical-offset="4320">
-          <caret line="244" column="36" selection-start-line="244" selection-start-column="36" selection-end-line="244" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.8469388" vertical-offset="4038" max-vertical-offset="4680">
+          <caret line="252" column="55" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
+          <folding>
+            <element signature="e#45#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

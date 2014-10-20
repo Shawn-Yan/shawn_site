@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block top %}
+        search
+{% end %}
+
+{% block body %}
+    {% for article in articles %}
+        {% module Entry(article) %}
+    {% end %}
+{% end %}
