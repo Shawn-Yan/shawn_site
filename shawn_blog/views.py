@@ -8,6 +8,10 @@ import unicodedata
 import re
 from datetime import datetime
 import urllib
+import json
+import time
+import os
+from os.path import join, exists, getsize, getctime, splitext
 
 # no.1 is for me
 author_id = 1
@@ -138,3 +142,104 @@ class AboutMeHandler(BaseHandler):
     def get(self):
         self.render('about_me.html')
 
+
+class KeFileBrowseHandler(BaseHandler):
+    def get(self):
+        file_type = self.get_argument('dir')
+        current_dir_path = self.get_argument('path', default='')
+        file_type_allowed = []
+        if file_type == "image":
+            file_type_allowed = ['.jpg', '.gif', '.bmp', '.jpeg', '.png']
+        elif file_type == "flash":
+            file_type_allowed = ['.swf', '.flv']
+        elif file_type == "media":
+            file_type_allowed = ['.swf', '.flv', '.mp3', '.wav', '.wma', '.wmv', '.mid', '.avi', '.mpg', '.asf', '.rmvb']
+        elif file_type == "file":
+            file_type_allowed = ['.doc', '.docx', '.pdf', '.xls', '.xlsx', '.ppt', '.htm', '.html', '.txt', '.zip', '.rar', '.gz', '.bz2']
+
+        root_path = join(self.settings['static_path'], 'media', current_dir_path)
+
+        moveup_dir_path = ''
+        file_list = []
+
+        for name in os.listdir(root_path):
+            file_dict = {}
+            full_name = join(root_path, name).replace('\\', '/')
+            file_dict['filename'] = name
+            file_dict['filesize'] = getsize(full_name)
+            file_dict['filetype'] = splitext(full_name)[1][1:]
+            c_time = getctime(full_name)
+            file_dict['datetime'] = str(datetime.fromtimestamp(c_time))[:-7]
+            file_dict['has_file'] = (os.path.isdir(full_name) and len(os.listdir(full_name)) > 0)
+            file_dict['is_dir'] = os.path.isdir(full_name)
+            file_dict['is_photo'] = os.path.splitext(full_name)[1] in file_type_allowed
+
+            file_list.append(file_dict)
+
+        total_count = len(file_list)
+        json_obj = {
+            'current_url': r'/static/media/' + current_dir_path,
+            'current_dir_path': current_dir_path,
+            'moveup_dir_path': moveup_dir_path,
+            'file_list': file_list,
+            'total_count': total_count}
+
+        self.write(json.dumps(json_obj, ensure_ascii=False))
+
+
+class KeFileUploadHandler(BaseHandler):
+    def post(self):
+        file_type = self.get_argument('dir')
+        imgFile = self.request.files['imgFile'][0]
+        img_body = imgFile['body']
+
+        if len(img_body) > (1024 * 1024 * 5):
+            self.write(json.dumps(
+                    {'error': 1, 'message': 'allow the 5M or less'}
+                , ensure_ascii=False))
+            return
+        file_type_allowed = []
+        if file_type == "image":
+            file_type_allowed = ['.jpg', '.gif', '.bmp', '.jpeg', '.png']
+        elif file_type == "flash":
+            file_type_allowed = ['.swf', '.flv']
+        elif file_type == "media":
+            file_type_allowed = ['.swf', '.flv', '.mp3', '.wav', '.wma', '.wmv', '.mid', '.avi', '.mpg', '.asf', '.rmvb']
+        elif file_type == "file":
+            file_type_allowed = ['.doc', '.docx', '.pdf', '.xls', '.xlsx', '.ppt', '.htm', '.html', '.txt', '.zip', '.rar', '.gz', '.bz2']
+
+
+        root_path = self.settings['static_path'] + '/media/'+file_type+'/'
+        current_url = r'/static/media/'+file_type+'/'
+
+        # dir name is base on time format like %Y%m%d
+        t_datetime = datetime.fromtimestamp(time.time()).strftime('%Y%m%d')
+        dir_name = join(t_datetime[:4], t_datetime[4:6], t_datetime[6:])
+        c_dir = join(root_path, dir_name)
+        if not exists(c_dir):
+            os.makedirs(c_dir)
+
+
+        # file name is base on the absolute time
+        filename = str(int(time.time()))
+        file_ext = '.' + imgFile['filename'].split('.')[-1]
+        filename += file_ext
+        if file_ext not in file_type_allowed:
+            self.write(json.dumps(
+                {'error': 1, 'message': 'extension name not allowed'}, ensure_ascii=False))
+            return
+
+        temp_file = open(join(root_path, dir_name, filename).lower(), 'wb+')
+        temp_file.write(img_body)
+        temp_file.close()
+
+        current_url += (dir_name + r"/" + filename).replace('\\', '/')
+        self.write(json.dumps({'error': 0, 'url': current_url}))
+
+    def get(self):
+        print "image"
+
+
+class SearchHandler(BaseHandler):
+    def get(self, *args, **kwargs):
+        self.render('about_me.html')

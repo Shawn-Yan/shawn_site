@@ -169,7 +169,8 @@ KindEditor.lang({
 	'table.cells' : '单元格数',
 	'table.rows' : '行数',
 	'table.cols' : '列数',
-	'table.size' : '大小',
+	'table.size' : '大小',		'SimSun' : '宋体',
+
 	'table.width' : '宽度',
 	'table.height' : '高度',
 	'table.percent' : '%',

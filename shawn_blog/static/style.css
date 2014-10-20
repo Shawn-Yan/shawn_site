@@ -14,8 +14,8 @@
 .search_site{margin-top:20px}
 .search_site #search_form span{padding-left:10px;font-size:16px;position:absolute;_margin-top:1px;*margin-top:1px;background:#811241;display:inline-block;line-height:35px;color:#eab6cc;height:35px;width:220px;letter-spacing:2px}
 .search_site #search_form #s{margin-left:-120px;padding:0 10px 0 10px;background:#777;height:35px;line-height:35px;width:135px;font-size:16px;border:none;font-family:å¾®è½¯é›…é»‘,Verdana,Geneva,sans-serif;color:#eee}
-.search_site #search_form #search_submit{position:absolute;_margin-top:1px;*margin-top:1px;border:none;cursor:hand;cursor:pointer;height:35px;width:35px;background:#EB7AAA url(images/search.png) no-repeat}
-.search_site #search_form #search_submit:hover{background:#72B332 url(images/search.png) no-repeat 0 -35px}
+.search_site #search_form #search_submit{position:absolute;_margin-top:1px;*margin-top:1px;border:none;cursor:hand;cursor:pointer;height:35px;width:35px;background:#EB7AAA url(/static/media/image/search.png) no-repeat}
+.search_site #search_form #search_submit:hover{background:#72B332 url(media/image/search.png) no-repeat 0 -35px}
 .feed-tip{font-size:16px;line-height:26px;padding-left:6px;height:26px;border-left:#F88FB7 20px solid;margin-top:25px;color:#888}
 .feed-tip a{color:#aaa}
 .feed-tip a:hover{color:#458B00}

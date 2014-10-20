@@ -1,9 +1,10 @@
 KindEditor.ready(function(K) {
     var editor1 = K.create('textarea[name="markdown"]', {
     cssPath : "{{ static_url('kindeditor/plugins/code/prettify.css') }}",
-    uploadJson : '/upload/',
-    fileManagerJson : '/upload/',
+    uploadJson : '/kindEditor/fileUpload/',
+    fileManagerJson : '/kindEditor/fileBrowse/',
     allowFileManager : true,
+    allowUpload : true,
     afterCreate : function() {
         var self = this;
         K.ctrl(document, 13, function() {

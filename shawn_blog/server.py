@@ -24,6 +24,9 @@ HANDLERS = [
     (r'/auth/login', AuthLoginHandler),
     (r'/auth/logout', AuthLogoutHandler),
     (r'/type/([^/]+)', ArticleTypeHandler),
+    (r'/kindEditor/fileUpload/', KeFileUploadHandler),
+    (r'/kindEditor/fileBrowse/', KeFileBrowseHandler),
+    (r'/search/', SearchHandler),
     (r'/about', AboutMeHandler),
 ]
 
@@ -36,7 +39,7 @@ class BlogApp(web.Application):
             template_path=str(sub_path('templates')),
             static_path=str(sub_path('static')),
             ui_modules={"Entry": EntryModule},
-            xsrf_cookies=True,
+            xsrf_cookies=False,
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
             login_url="/auth/login",
             debug=True,
