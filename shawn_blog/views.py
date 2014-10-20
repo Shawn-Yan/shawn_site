@@ -249,7 +249,6 @@ class SearchHandler(BaseHandler):
         else:
             all_articles = self.db.select('article')
             for temp in all_articles:
-                search_text.lower()
-                if search_text in temp['title'].lower():
+                if search_text.lower() in temp['title'].lower():
                     articles.append(temp)
         self.render('search_result.html', articles=articles)
